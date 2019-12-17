@@ -1,6 +1,9 @@
 # ctw-seurat
 Generate and Upload Cell Type Worksheets to the UCSC Cell Atlas from a seurat object.
 
+If you want to generate a worksheet from a scanpy object or tsv files, install the package, 
+Stuartlab-UCSC/ctwpy instead of this one.
+
 ### What is a Cell Type Worksheet?
 A Cell Type Worksheet is an application designed to ease the burden of manual cell type annotation from single cell
 mRNA sequencing experiments. It lets you explore the specificity of markers across clusters and label the clusters
@@ -71,6 +74,7 @@ The only files in the repositories that should differ:
  ```
  ingest/cli.py
  ingest/seurat_api.py (only exists in ctw-seurat)
+ ingest/tsv_ingest.py (only exists in ctwpy)
  README.md
  setup.py
 ``` 
