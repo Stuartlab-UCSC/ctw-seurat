@@ -2,10 +2,10 @@
 cli exposed via flask
 """
 import click
-from ingest.webapi import upload, read_credentials
-import ingest.scanpyapi as ad_obj
-import ingest.scanpy_ingest as scanpy_ingest
-from ingest.seurat_api import rpy2Seurat3ToAnnData
+from ctwingest.webapi import upload, read_credentials
+import ctwingest.scanpyapi as ad_obj
+import ctwingest.scanpy_ingest as scanpy_ingest
+from ctwseurat.seurat_api import rpy2Seurat3ToAnnData
 import os
 
 

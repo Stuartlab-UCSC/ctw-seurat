@@ -1,4 +1,4 @@
-# ctw-seurat
+# ctwseurat
 Generate and Upload Cell Type Worksheets to the UCSC Cell Atlas from a seurat object.
 
 If you want to generate a worksheet from a scanpy object or tsv files, install the package, 
@@ -16,7 +16,7 @@ The web application provides three interactive components for this goal:
 3. A table of gene metric rankings per cluster.
 
 Here's a rough visual of the layout of the application, the gene metrics are explored via the table at the bottom.
-![Alt text](cell_atlas_layout.png)
+![Alt text](ctwingest.cell_atlas_layout.png)
 
 This python package manipulates a seurat object into the ctw format and provides an avenue for uploading a worksheet to the UCSC Cell Atlas.
 
@@ -31,8 +31,8 @@ data to the server.
 
 Clone the repository and make a virtual environment.
 ```
-git clone https://github.com/Stuartlab-UCSC/ctw-seurat.git
-cd ctw-seurat
+git clone https://github.com/Stuartlab-UCSC/ctwseurat.git
+cd ctwseurat
 # Create a python3 virtual environment to install the package in.
 virtualenv -p $(which python3) env
 ```
@@ -40,7 +40,10 @@ virtualenv -p $(which python3) env
 ```
 # Enter virtual environment
 source env/bin/activate
-# Use pip to install
+# Use pip to install the ctwingest dependency
+pip3 install --editable git://github.com/Stuartlab-UCSC/ctwingest.git
+#pip3 install --editable git://github.com/Stuartlab-UCSC/ctwingest.git#egg=ctwingest
+# Use pip to install this package
 pip3 install --editable .
 ```
 Now you'll be able to access the applications command line interface. The command line interface is available anytime you enter the environment.
@@ -62,19 +65,5 @@ ctw-upload worksheet-name.ctw.tgz credentials.json
 ```
 
 To upload a worksheet to the server, you'll notice the credentials.json file is necessary. Use our
-[example](https://github.com/Stuartlab-UCSC/ctw-seurat/blob/master/credentials.json) for a starting
+[example](https://github.com/Stuartlab-UCSC/ctwseurat/blob/master/credentials.json) for a starting
 place.
-
-### Contributors to ctw-seurat
-This repository should be kept in sync with its counterpart: ctwpy. There are two 
-repositories because ctw-seurat requires R to be installed before installing the package. 
-Someone only interested in scanpy may not have R installed.
-
-The only files in the repositories that should differ:
- ```
- ingest/cli.py
- ingest/seurat_api.py (only exists in ctw-seurat)
- ingest/tsv_ingest.py (only exists in ctwpy)
- README.md
- setup.py
-``` 
