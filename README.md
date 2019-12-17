@@ -16,7 +16,7 @@ The web application provides three interactive components for this goal:
 3. A table of gene metric rankings per cluster.
 
 Here's a rough visual of the layout of the application, the gene metrics are explored via the table at the bottom.
-![Alt text](ingest.cell_atlas_layout.png)
+![Alt text](cell_atlas_layout.png)
 
 This python package manipulates a seurat object into the ctw format and provides an avenue for uploading a worksheet to the UCSC Cell Atlas.
 
