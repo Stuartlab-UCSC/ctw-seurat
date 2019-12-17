@@ -16,7 +16,7 @@ The web application provides three interactive components for this goal:
 3. A table of gene metric rankings per cluster.
 
 Here's a rough visual of the layout of the application, the gene metrics are explored via the table at the bottom.
-![Alt text](ctwingest.cell_atlas_layout.png)
+![Alt text](ingest.cell_atlas_layout.png)
 
 This python package manipulates a seurat object into the ctw format and provides an avenue for uploading a worksheet to the UCSC Cell Atlas.
 
@@ -41,8 +41,7 @@ virtualenv -p $(which python3) env
 # Enter virtual environment
 source env/bin/activate
 # Use pip to install the ctwingest dependency
-pip3 install --editable git://github.com/Stuartlab-UCSC/ctwingest.git
-#pip3 install --editable git://github.com/Stuartlab-UCSC/ctwingest.git#egg=ctwingest
+pip3 install --editable git+git://github.com/Stuartlab-UCSC/ctwingest.git#egg=ctwingest
 # Use pip to install this package
 pip3 install --editable .
 ```
