@@ -1,8 +1,9 @@
 # ctwseurat
 Generate and Upload Cell Type Worksheets to the UCSC Cell Atlas from a seurat object.
 
-If you want to generate a worksheet from a scanpy object or tsv files, install the package, 
-Stuartlab-UCSC/ctwpy instead of this one.
+If you want to generate a worksheet from a scanpy object or tsv files, use 
+[ctwpy](https://github.com/Stuartlab-UCSC/ctwpy) 
+instead.
 
 ### What is a Cell Type Worksheet?
 A Cell Type Worksheet is an application designed to ease the burden of manual cell type annotation from single cell
